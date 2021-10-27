@@ -1,5 +1,5 @@
 """
-Read a csv and return the 
+Read a csv and return the data in it.
 
 @author: Andy Gabler & Kevin Spike
 """
