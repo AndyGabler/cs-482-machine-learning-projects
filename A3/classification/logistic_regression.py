@@ -15,8 +15,7 @@ from sklearn.metrics import confusion_matrix
 data, targets, feature_names, target_names, file_name = csv.read_csv("haberman.data")
 X_train, X_test, y_train, y_test = train_test_split(data, targets, test_size=0.2, random_state=0)
 
-# Train up our model
-# TODO conider using L1 penalty?
+# Train up our model, using default L2 since L1 produced less desireable results
 logisticEstimator = LogisticRegression().fit(X_train, y_train)
 
 # Now use a confusion matrix to get TN, TP, FN, FP

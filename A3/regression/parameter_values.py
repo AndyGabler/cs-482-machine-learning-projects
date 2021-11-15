@@ -16,18 +16,19 @@ ridge_model = models[1]
 linear_model = models[2]
 
 # TODO, technically correct but could use some prettying/tuning
+# TODO play with sizes
 fig, ax = plt.subplots()
 ax.scatter(
     np.arange(0, lasso_model.coef_.shape[0], 1), 
     lasso_model.coef_, 
     marker = 'o',
-    label="Lasso"
+    label="Lasso alpha=0.1"
 )
 ax.scatter(
     np.arange(0, ridge_model.coef_.shape[0], 1), 
     ridge_model.coef_, 
     marker = 'd',
-    label="Ridge"
+    label="Ridge alpha=100.0"
 )
 ax.scatter(
     np.arange(0, linear_model.coef_.shape[0], 1), 

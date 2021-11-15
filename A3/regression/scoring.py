@@ -51,13 +51,13 @@ if __name__ == "__main__":
         "R^2" : {
             "Lasso Regression" : lasso_r_square, 
             "Ridge Regression" : ridge_r_square, 
-        "Linear Regression" : linear_r_square
+            "Linear Regression" : linear_r_square
         },
         "RMSE" : {
             "Lasso Regression" : lasso_rmse, 
             "Ridge Regression" : ridge_rmse, 
             "Linear Regression" : linear_rmse
-            }
-        })
+        }
+    })
 
     print(score_frame)
