@@ -13,6 +13,29 @@ def standard_scale(to_scale):
     return scaler.transform(to_scale.reshape((to_scale.shape[0], 1))).reshape((to_scale.shape[0]))
 
 def data_transformation():
+    """
+    Features considered:
+        6   LotFrontage
+        7   LotArea
+        40  YearBuilt
+        41  YearRemodAdd
+        70  MasVnrArea
+        104 BsmtFinSF1
+        109 BsmtUnfSf
+        110 TotalBsmtSf
+        124 1stFlrSF
+        125 2ndFlrSF
+        126 GrLivArea
+        152 GarageYrBlt
+        158 GarageArea
+        171 WoodDeckSF
+        172 OpenPorchSF
+        173 EnclosedPorch
+        174 3SsnPorch
+        175 ScreenPorch
+        176 PoolArea
+    Features where 0 has a special value were skipped
+    """
     data, targets, feature_names = univariate_selection()
     
     # One-Hot-Encoding has already been done at this point.
